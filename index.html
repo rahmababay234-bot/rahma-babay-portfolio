@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahma Babay - Étudiante en Télécommunications</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(5, 150, 105, 0.1);
+        }
+        
+        .section-padding {
+            padding: 5rem 0;
+        }
+        
+        .certificate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .certificate-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .certificate-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(5, 150, 105, 0.15);
+        }
+        
+        .certificate-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 3px solid #10b981;
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-padding {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            .certificate-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-xl font-bold gradient-text">Rahma Babay</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#profil" class="text-gray-600 hover:text-green-600 transition-colors duration-300">Profil</a>
+                    <a href="#formation" class="text-gray-600 hover:text-green-600 transition-colors duration-300">Formation</a>
+                    <a href="#experience" class="text-gray-600 hover:text-green-600 transition-colors duration-300">Expérience</a>
+                    <a href="#competences" class="text-gray-600 hover:text-green-600 transition-colors duration-300">Compétences</a>
+                    <a href="#certifications" class="text-gray-600 hover:text-green-600 transition-colors duration-300">Certifications</a>
+                    <a href="#contact" class="text-gray-600 hover:text-green-600 transition-colors duration-300">Contact</a>
+                </div>
+                <button class="md:hidden text-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="min-h-screen flex items-center justify-center gradient-bg text-white pt-16 mobile-padding">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <!-- Profile Photo -->
+            <div class="w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+                <img src="images/rahma-profile.jpg" alt="Rahma Babay" class="w-full h-full object-cover">
+            </div>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">Rahma Babay</h1>
+            <p class="text-xl md:text-2xl text-green-100 mb-8 font-medium">Étudiante en Télécommunications</p>
+            <p class="text-lg md:text-xl text-green-200 max-w-2xl mx-auto leading-relaxed mb-12">
+                Secrétaire Générale au Club ATAST ISITCOM. Passionnée par les technologies émergentes, 
+                la cybersécurité et l'innovation. Je cherche à appliquer mes compétences dans des projets concrets.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" class="bg-white text-green-600 hover:bg-green-50 px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg">
+                    📬 Me Contacter
+                </a>
+                <a href="#certifications" class="border border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300">
+                    🏆 Voir mes Certifications
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Profile Section -->
+    <section id="profil" class="section-padding bg-white mobile-padding">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center gradient-text">Profil</h2>
+            
+            <div class="bg-gray-50 rounded-2xl p-8 card-hover border border-gray-200">
+                <div class="flex items-start gap-6">
+                    <div class="text-3xl">👩‍💻</div>
+                    <div>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                            Étudiante sérieuse en licence de télécommunications à l'ISITCOM, je m'adapte facilement 
+                            aux nouveaux environnements. Actuellement Secrétaire Générale du Club ATAST ISITCOM, 
+                            je combine leadership technique et engagement associatif.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-green-100 text-green-700 px-4 py-2 rounded-full font-medium">Leadership</span>
+                            <span class="bg-green-100 text-green-700 px-4 py-2 rounded-full font-medium">Adaptabilité</span>
+                            <span class="bg-green-100 text-green-700 px-4 py-2 rounded-full font-medium">Innovation</span>
+                            <span class="bg-green-100 text-green-700 px-4 py-2 rounded-full font-medium">Cybersécurité</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formation Section -->
+    <section id="formation" class="section-padding bg-gray-50 mobile-padding">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center gradient-text">Formation</h2>
+            
+            <div class="space-y-8">
+                <!-- Current Studies -->
+                <div class="bg-white rounded-2xl p-6 card-hover border border-gray-200">
+                    <div class="flex items-start gap-4">
+                        <div class="text-2xl">🎓</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Licence en Technologies de l'Information et de la Communication</h3>
+                            <p class="text-lg text-gray-600 mb-1">ISITCOM Hammam Sousse</p>
+                            <p class="text-gray-500">2023 - 2026</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baccalaureate -->
+                <div class="bg-white rounded-2xl p-6 card-hover border border-gray-200">
+                    <div class="flex items-start gap-4">
+                        <div class="text-2xl">📚</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Baccalauréat en Informatique</h3>
+                            <p class="text-lg text-gray-600 mb-1">Lycée Secondaire Beni Khiar</p>
+                            <p class="text-gray-500">2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-padding bg-white mobile-padding">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center gradient-text">Expérience Professionnelle</h2>
+            
+            <div class="bg-gray-50 rounded-2xl p-6 card-hover border border-gray-200">
+                <div class="flex items-start gap-4">
+                    <div class="text-2xl">💼</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Stage d'initiation - Bureau de Conduite Centralisé (BCC, STEG)</h3>
+                        <p class="text-lg text-gray-600 mb-4">Observation et apprentissage dans le domaine des télécommunications</p>
+                        <ul class="text-gray-700 leading-relaxed space-y-2">
+                            <li>• Observation du fonctionnement du Bureau de Conduite Centralisé (BCC)</li>
+                            <li>• Participation à des déplacements sur terrain dans différentes régions</li>
+                            <li>• Découverte du fonctionnement de la division Télécom et de ses moyens de communication</li>
+                            <li>• Observation du travail sur les équipements télécommandés (IAT, Reclosers, RTU)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="competences" class="section-padding bg-gray-50 mobile-padding">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center gradient-text">Compétences</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Technical Skills -->
+                <div class="bg-white rounded-2xl p-6 card-hover border border-gray-200">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                        <span>💻</span> Compétences Techniques
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-700 mb-2">Développement Web</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">HTML5</span>
+                                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">CSS</span>
+                                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-700 mb-2">Langages de Programmation</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">Python</span>
+                                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">C</span>
+                                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">Java</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-700 mb-2">Base de Données & Outils</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">SQL</span>
+                                <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">Word</span>
+                                <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">PowerPoint</span>
+                                <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">Excel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills & Languages -->
+                <div class="bg-white rounded-2xl p-6 card-hover border border-gray-200">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                        <span>🌟</span> Soft Skills & Langues
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-700 mb-2">Qualités Personnelles</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm">Esprit d'équipe</span>
+                                <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm">Adaptabilité</span>
+                                <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm">Gestion de temps</span>
+                                <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm">Organisation</span>
+                                <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm">Budgétisation</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-700 mb-2">Langues</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-600">Arabe</span>
+                                    <span class="text-sm text-gray-500">Langue maternelle</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-600">Français</span>
+                                    <span class="text-sm text-gray-500">Courant</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-600">Anglais</span>
+                                    <span class="text-sm text-gray-500">Intermédiaire</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section-padding bg-white mobile-padding">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center gradient-text">Certifications & Hackathons</h2>
+            
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Formation en Cours</h3>
+                <div class="bg-gray-50 rounded-2xl p-6 card-hover border border-gray-200 max-w-md mx-auto">
+                    <div class="flex items-center gap-4">
+                        <div class="text-2xl">🎯</div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800">Cisco Networking Academy</h4>
+                            <p class="text-gray-600">CCNAI - Formation en cours</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">Certificats Obtenus</h3>
+            <div class="certificate-grid">
+                <!-- Certificate 1 -->
+                <div class="certificate-card">
+                    <img src="images/certificates/student-academy.jpg" alt="Student Section Academy" class="certificate-img">
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2">Student Section Academy</h4>
+                        <p class="text-gray-600 text-sm mb-2">21-22 Décembre 2024</p>
+                        <p class="text-gray-700">Participation aux workshops et activités de formation</p>
+                    </div>
+                </div>
+
+                <!-- Certificate 2 -->
+                <div class="certificate-card">
+                    <img src="images/certificates/redroom-hackathon.jpg" alt="RedRoom Hackathon" class="certificate-img">
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2">Hackathon RedRoom</h4>
+                        <p class="text-gray-600 text-sm mb-2">15 Février 2025</p>
+                        <p class="text-gray-700">Compétition cybersécurité de 26 heures</p>
+                    </div>
+                </div>
+
+                <!-- Certificate 3 -->
+                <div class="certificate-card">
+                    <img src="images/certificates/atast-competition.jpg" alt="ATAST Competition" class="certificate-img">
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2">ATAST Student Section Competition</h4>
+                        <p class="text-gray-600 text-sm mb-2">Compétition nationale</p>
+                        <p class="text-gray-700">Engagement pour l'avancement de la science et technologie</p>
+                    </div>
+                </div>
+
+                <!-- Certificate 4 -->
+                <div class="certificate-card">
+                    <img src="images/certificates/atast-event.jpg" alt="ATAST Event" class="certificate-img">
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2">ATAST Biggest Event</h4>
+                        <p class="text-gray-600 text-sm mb-2">Événement majeur</p>
+                        <p class="text-gray-700">Contribution exceptionnelle à l'organisation</p>
+                    </div>
+                </div>
+
+                <!-- Certificate 5 -->
+                <div class="certificate-card">
+                    <img src="images/certificates/cyberbenders.jpg" alt="CyberBenders AI Challenge" class="certificate-img">
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2">CyberBenders AI Challenge</h4>
+                        <p class="text-gray-600 text-sm mb-2">25-26 Novembre 2023</p>
+                        <p class="text-gray-700">Challenge en cybersécurité et intelligence artificielle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Association Section -->
+    <section id="association" class="section-padding bg-gray-50 mobile-padding">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center gradient-text">Vie Associative</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Current Role -->
+                <div class="bg-white rounded-2xl p-6 card-hover border border-gray-200">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="text-2xl">👑</div>
+                        <h3 class="text-xl font-bold text-gray-800">Secrétaire Générale</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2 font-semibold">ATAST CLUB ISITCOM 2024-2025</p>
+                    <ul class="text-gray-700 space-y-2">
+                        <li>• Contribution à des événements collaboratifs</li>
+                        <li>• Organisation d'événements et randonnées</li>
+                        <li>• Participation à la compétition nationale B-tech</li>
+                    </ul>
+                </div>
+
+                <!-- Previous Role -->
+                <div class="bg-white rounded-2xl p-6 card-hover border border-gray-200">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="text-2xl">🌟</div>
+                        <h3 class="text-xl font-bold text-gray-800">Membre Actif</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2 font-semibold">ATAST CLUB ISITCOM 2023-2024</p>
+                    <ul class="text-gray-700 space-y-2">
+                        <li>• Participation à des workshops et hackathons</li>
+                        <li>• Organisation d'événements internes</li>
+                        <li>• Implication dans la vie du club</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-white mobile-padding">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center gradient-text">Contact</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Contact Info -->
+                <div class="bg-gray-50 rounded-2xl p-6 card-hover border border-gray-200">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">Coordonnées</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <span class="text-xl">📍</span>
+                            <span class="text-gray-600">Sousse, Nabeul</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-xl">📞</span>
+                            <span class="text-gray-600">29 293 466</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-xl">📧</span>
+                            <a href="mailto:rahma.babay234@gmail.com" class="text-gray-600 hover:text-green-600 transition-colors">
+                                rahma.babay234@gmail.com
+                            </a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-xl">💼</span>
+                            <a href="https://www.linkedin.com/in/rahma-babay-961907303" class="text-gray-600 hover:text-green-600 transition-colors">
+                                LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interests -->
+                <div class="bg-gray-50 rounded-2xl p-6 card-hover border border-gray-200">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Centres d'Intérêt</h3>
+                    <div class="flex flex-wrap gap-3 mb-4">
+                        <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Photographie</span>
+                        <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Montage vidéo</span>
+                        <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Cinéma</span>
+                        <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Cybersécurité</span>
+                        <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Innovation</span>
+                    </div>
+                    <p class="text-gray-600 text-sm">
+                        Passionnée par la création visuelle et les nouvelles technologies, 
+                        je combine créativité et expertise technique dans mes projets.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8 mobile-padding">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <p class="text-gray-400 text-lg">© 2025 Rahma Babay - Secrétaire Générale ATAST ISITCOM</p>
+            <p class="text-gray-500 text-sm mt-2">Leadership, Innovation et Excellence Technologique</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        document.querySelector('button.md\\:hidden')?.addEventListener('click', function() {
+            const nav = document.querySelector('.hidden.md\\:flex');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+            nav.classList.toggle('flex-col');
+            nav.classList.toggle('absolute');
+            nav.classList.toggle('top-16');
+            nav.classList.toggle('left-0');
+            nav.classList.toggle('right-0');
+            nav.classList.toggle('bg-white');
+            nav.classList.toggle('p-4');
+            nav.classList.toggle('space-y-4');
+        });
+    </script>
+
+</body>
+</html>
